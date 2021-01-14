@@ -1,5 +1,5 @@
 <Bundle xmlns="http://hl7.org/fhir">
-    <type value="transaction"></type>
+    <type value="message"></type>
     <!--MessageHeader-->
     <entry>
         <fullUrl value="urn:uuid:1cbdfb97-5859-48a4-8301-d50eab818i88"/>
@@ -8,7 +8,7 @@
             <text> 
                 <status value="generated"/> 
                 <div xmlns="http://www.w3.org/1999/xhtml">
-                <p> SDC example Transaction Bundle for fake patient Jose including Patient, Encounter</p> 
+                <p> SDC example Message Bundle for fake patient Jose including Patient, Encounter</p> 
                 </div> 
             </text> 
             <eventCoding> 
@@ -18,6 +18,7 @@
             <!-- Implementers may wish to include sender, enterer, author, destination, etc. to further identify this bundle -->
             <source> 
                 <name value="IHE SDC on FHIR Parser"/> 
+                <!--insert URL for parser here-->
                 <endpoint value="http://"/> 
             </source> 
         </MessageHeader> 
@@ -39,13 +40,8 @@
                 <gender value="male"></gender>
             </Patient>
         </resource>
-        <request>
-            <method value="PUT"></method>
-            <url value="Patient?identifier=urn:system|JoelAlexPatient"></url>
-        </request>
     </entry>
     <!--Encounter-->
-    <!--This Encounter makes more sense as a ServiceRequest, would a procedure be needed here?-->
     <entry>
         <fullUrl value="urn:uuid:2c08e319-f0af-48b3-98df-267cbd376926"></fullUrl>
         <resource>
@@ -66,10 +62,6 @@
                 </subject> 
             </Encounter> 
         </resource>
-        <request>
-            <method value="PUT"></method>
-            <url value="Encounter?identifier=urn:system|JoseEncounter1"></url>
-        </request>
     </entry>
     <!--DocumentReference with SDC form-->
     <entry>
@@ -96,10 +88,6 @@
                 </content>
             </DocumentReference>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="DocumentReference"></url>
-        </request>
     </entry>
     <!--Observations-->
     <entry>
@@ -132,10 +120,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:900f6b79-8f19-4361-b3f9-0e13d549a7ba"></fullUrl>
@@ -168,10 +152,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:1f995cae-654d-4db7-a9c0-7b1b23315467"></fullUrl>
@@ -204,10 +184,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:9c4e1de7-706d-4375-b5d9-7f4a415141d0"></fullUrl>
@@ -240,10 +216,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:3f83bbaf-db1b-4027-854e-c80cd05b083d"></fullUrl>
@@ -276,10 +248,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:65a2cf43-0f88-4e56-84e5-18f06a840161"></fullUrl>
@@ -312,10 +280,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:d79b44fe-589b-4615-80e1-0ae058e90879"></fullUrl>
@@ -348,10 +312,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:49f02a44-e44f-4eac-8305-9eca2f9ac17b"></fullUrl>
@@ -395,10 +355,6 @@
                 </component>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:5f7d6ef0-073b-457c-9177-ff5a503044f5"></fullUrl>
@@ -432,10 +388,6 @@
                 </component>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:0319e121-c139-4d2b-b829-1a37760369af"></fullUrl>
@@ -470,10 +422,6 @@
                 </component>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:952c37d3-7952-4e54-99bb-d3d37e0b004b"></fullUrl>
@@ -508,10 +456,6 @@
                 </component>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:16cbc45e-a4b8-4fef-b6fc-548ebd8f6491"></fullUrl>
@@ -544,10 +488,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:2682a3fe-d0cb-46f1-bbee-7e6c32fb1f13"></fullUrl>
@@ -580,10 +520,6 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
     <entry>
         <fullUrl value="urn:uuid:0e0aec76-9e4a-48a8-9ca2-03f78419fc35"></fullUrl>
@@ -616,9 +552,5 @@
                 </derivedFrom>
             </Observation>
         </resource>
-        <request>
-            <method value="POST"></method>
-            <url value="Observation"></url>
-        </request>
     </entry>
 </Bundle>
